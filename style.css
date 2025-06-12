@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial, sans-serif;
+  }
+
+  .love {
+    position: absolute;
+    color: hotpink;
+    font-size: 10px;
+    animation: fall linear infinite;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0.6;
+    }
+  }
+
+  .explosion {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, pink, transparent);
+    animation: explode 1s ease-out forwards;
+  }
+
+  @keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(15);
+      opacity: 0;
+    }
+  }
+
+  .love-you {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    animation: fadeOut 2s ease-out forwards;
+    white-space: nowrap;
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.5); }
+  }
